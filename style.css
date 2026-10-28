@@ -273,3 +273,21 @@ footer small { grid-column: 1 / -1; font-size:14px; color:#8497b0; }
   .mosaic button { margin-bottom: 10px; border-radius: 14px; }
   .lb .p { left:6px; } .lb .n { right:6px; }
 }
+
+/* планшет (801–1100 px): первый экран не вылезает за край, кнопки не прячутся под цифрами */
+@media (min-width: 801px) and (max-width: 1100px) {
+  :root { --pad: 40px; --section: 72px; }
+  header { gap: 24px; }
+  nav { gap: 20px; font-size: 15px; white-space: nowrap; }
+  .logo { white-space: nowrap; }
+  .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; min-height: 0; padding-bottom: 72px; }
+  .hero h1 { font-size: 48px; margin-bottom: 20px; }
+  .hero p { font-size: 18px; margin-bottom: 28px; }
+  .hero .btns { gap: 12px; }
+  .hero .btn { padding: 14px 24px; font-size: 16px; }
+  .photo { height: 520px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-bottom: 1px solid var(--line); }
+  .stat:nth-child(2n) { border-right: 0; }
+  .stat:nth-last-child(-n+2) { border-bottom: 0; }
+}
